@@ -1,0 +1,13 @@
+diff --git a/terminal/terminal-window-dropdown.c b/terminal/terminal-window-dropdown.c
+index 0b763b5..b32ab88 100644
+--- a/terminal/terminal-window-dropdown.c
++++ b/terminal/terminal-window-dropdown.c
+@@ -759,7 +759,7 @@ terminal_window_dropdown_show (TerminalWindowDropdown *dropdown,
+         }
+ 
+       /* minimize to fit terminal charaters */
+-      w -= (w - xpad) % char_width;
++      /* w -= (w - xpad) % char_width; */
+       h -= (h - ypad) % char_height;
+     }
+ 

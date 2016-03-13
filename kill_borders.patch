@@ -1,0 +1,16 @@
+diff --git a/terminal/terminal-window-dropdown.c b/terminal/terminal-window-dropdown.c
+index 0b763b5..3dd7ed8 100644
+--- a/terminal/terminal-window-dropdown.c
++++ b/terminal/terminal-window-dropdown.c
+@@ -256,9 +256,9 @@ terminal_window_dropdown_init (TerminalWindowDropdown *dropdown)
+ 
+   /* adjust notebook for drop-down usage */
+   gtk_notebook_set_tab_pos (GTK_NOTEBOOK (window->notebook), GTK_POS_BOTTOM);
+-  gtk_notebook_set_show_border (GTK_NOTEBOOK (window->notebook), TRUE);
++  gtk_notebook_set_show_border (GTK_NOTEBOOK (window->notebook), FALSE);
+   terminal_window_notebook_show_tabs (window);
+-  terminal_util_set_style_thinkess (window->notebook, 1);
++  terminal_util_set_style_thinkess (window->notebook, 0);
+ 
+   /* actions we don't want */
+   action = gtk_action_group_get_action (window->action_group, "show-borders");

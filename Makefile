@@ -1,4 +1,4 @@
-default: sudo clean xfce4-terminal_0.6.3-1ubuntu1.1_amd64.deb
+default: sudo tools clean xfce4-terminal_0.6.3-1ubuntu1.1_amd64.deb
 
 export DEBFULLNAME="Felix Hummel"
 export DEBEMAIL="xfce4-terminal@felixhummel.de"
@@ -22,8 +22,11 @@ xfce4-terminal_0.6.3-1ubuntu1.1_amd64.deb: patch
 		&& debuild -us -uc -b
 
 .PHONY: install
-install: xfce4-terminal_0.6.3-1ubuntu1.1_amd64.deb
+install:
 	sudo dpkg -i xfce4-terminal_0.6.3-1ubuntu1.1_amd64.deb
+
+tools:
+	sudo apt-get --yes install build-essential devscripts lintian patch patchutils
 
 .PHONY: clean
 clean:

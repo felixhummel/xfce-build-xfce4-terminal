@@ -1,3 +1,12 @@
+Deprecated
+==========
+Things are fine nowadays::
+
+    $ xfce4-terminal --version
+    xfce4-terminal 0.8.7.4 (Xfce 4.12)
+
+:)
+
 Felix' xfce4-terminal
 =====================
 xfce4-terminal has ugly borders when run with the ``--drop-down`` flag.
